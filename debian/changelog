@@ -1,3 +1,18 @@
+golang-github-opencontainers-specs (1.2.0-2) unstable; urgency=medium
+
+  * Team upload.
+  * Backport CPU affinity from git main, needed for crun >= 1.19.
+
+ -- Faidon Liambotis <paravoid@debian.org>  Sat, 04 Jan 2025 11:40:53 +0200
+
+golang-github-opencontainers-specs (1.2.0-1) unstable; urgency=medium
+
+  * Team upload.
+  * New upstream release.
+  * Update Standards-Version to 4.7.0 (no changes)
+
+ -- Faidon Liambotis <paravoid@debian.org>  Thu, 02 May 2024 16:29:54 +0300
+
 golang-github-opencontainers-specs (1.1.0-1) unstable; urgency=medium
 
   * Team upload.

@@ -28,8 +28,8 @@ The `null` value MUST NOT be confused with an empty value such as `0`, `false`, 
 ```
 
 ## <a name="featuresHooks" />Hooks
-* **`hooks`** (array of strings, OPTIONAL) The recognized names of the [hooks](config.md#hooks).
-  The runtime MUST support the elements in this array as the [`hooks` property of `config.json`](config.md#hooks).
+* **`hooks`** (array of strings, OPTIONAL) The recognized names of the [hooks](config.md#posix-platform-hooks).
+  The runtime MUST support the elements in this array as the [`hooks` property of `config.json`](config.md#posix-platform-hooks).
 
 ### Example
 ```json
@@ -139,6 +139,24 @@ The current version of the spec do not provide a way to enumerate the possible v
   "org.opencontainers.runc.version": "1.1.0"
 }
 ```
+
+## <a name="featuresPotentiallyUnsafeConfigAnnotations" />Unsafe annotations in `config.json`
+
+**`potentiallyUnsafeConfigAnnotations`** (array of strings, OPTIONAL) contains values of [`annotations` property of `config.json`](config.md#annotations)
+that may potentially change the behavior of the runtime.
+
+A value that ends with "." is interpreted as a prefix of annotations.
+
+### Example
+```json
+"potentiallyUnsafeConfigAnnotations": [
+  "com.example.foo.bar",
+  "org.systemd.property."
+]
+```
+
+The example above matches `com.example.foo.bar`, `org.systemd.property.ExecStartPre`, etc.
+The example does not match `com.example.foo.bar.baz`.
 
 # Example
 
