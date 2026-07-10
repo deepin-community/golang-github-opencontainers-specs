@@ -1,13 +1,15 @@
 Source: golang-github-opencontainers-specs
 Section: golang
 Priority: optional
-Standards-Version: 4.6.2
+Standards-Version: 4.7.0
 Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
-Uploaders: Dmitry Smirnov <onlyjob@debian.org>,
-           Tim Potter <tpot@hpe.com>,
-Build-Depends: debhelper-compat (= 13),
-               dh-golang,
-               golang-any,
+Uploaders:
+ Dmitry Smirnov <onlyjob@debian.org>,
+ Tim Potter <tpot@hpe.com>,
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-golang,
+ golang-any,
 Homepage: https://github.com/opencontainers/runtime-spec
 Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-opencontainers-specs
 Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-opencontainers-specs.git
@@ -16,8 +18,10 @@ Testsuite: autopkgtest-pkg-go
 XS-Go-Import-Path: github.com/opencontainers/runtime-spec
 
 Package: golang-github-opencontainers-specs-dev
-Provides: golang-github-opencontainers-runtime-spec-dev,
-Depends: ${misc:Depends},
+Provides:
+ golang-github-opencontainers-runtime-spec-dev,
+Depends:
+ ${misc:Depends},
 Architecture: all
 Multi-Arch: foreign
 Description: Open Container Specifications
